@@ -1,0 +1,14 @@
+.idea
+.vscode/
+__pycache__
+media/
+dist/
+*.egg-info/
+htmlcov/
+.coverage
+.pytest_cache
+*.log
+*.py[co]
+*.sqlite3
+.env
+secrets.json
