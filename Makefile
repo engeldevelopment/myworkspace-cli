@@ -1,4 +1,4 @@
-test:
+test: lint
 	@pytest -v
 
 lint:
@@ -7,5 +7,5 @@ lint:
 black:
 	@black workspace/ tests/
 
-cov:
+cov: lint
 	@pytest --cov

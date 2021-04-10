@@ -6,11 +6,11 @@ from typing import List
 from .exceptions import ThisIsNotAWorkspace
 
 
-class WorkSpace:
+class Workspace:
     def __init__(self, name):
         self.name = name
         self.created = False
-        self.children: List[WorkSpace] = []
+        self.children: List[Workspace] = []
         self.parent = None
 
     def build(self):
@@ -24,7 +24,7 @@ class WorkSpace:
             child.build()
 
     def add_child(self, child):
-        if not isinstance(child, WorkSpace):
+        if not isinstance(child, Workspace):
             raise ThisIsNotAWorkspace()
         child.parent = self
         self.children.append(child)

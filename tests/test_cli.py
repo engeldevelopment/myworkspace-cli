@@ -1,8 +1,8 @@
 from click.testing import CliRunner
 
-import pytest
-
 from myworkspace.scripts.cli import workspace
+
+import pytest
 
 
 @pytest.fixture
