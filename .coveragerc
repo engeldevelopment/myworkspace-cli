@@ -1,5 +1,5 @@
 [run]
-source = myworkspace
+source = fizzbuzz
 
 [report]
 ignore_errors = True
