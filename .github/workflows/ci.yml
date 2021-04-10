@@ -15,8 +15,10 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Installing poetry
-        run: pip install poetry
+      - name: Installing and configuring poetry
+        run: |
+          pip install poetry
+          poetry config virtualenvs.create false
 
       - name: Installing dependencies
         run:  poetry install
