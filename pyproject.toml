@@ -21,13 +21,13 @@ pycodestyle = ["-F401", "-E501"]
 pyflakes = ["-*"]
 
 [tool.poetry]
-name = "workspace"
+name = "myworkspace"
 version = "0.1.0"
 description = "Herramienta para construir mi espacio de trabajo."
 authors = ["engel <engeljavierpinto@gmail.com>"]
 
 [tool.poetry.scripts]
-myworkspace = "workspace.scripts.cli:workspace"
+myworkspace = "myworkspace.scripts.cli:workspace"
 
 [tool.poetry.dependencies]
 python = "^3.8"

@@ -1,6 +1,6 @@
 import click
 
-from workspace.core import WorkSpace
+from myworkspace.core import WorkSpace
 
 
 @click.group("workspace")

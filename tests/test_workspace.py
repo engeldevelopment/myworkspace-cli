@@ -2,8 +2,8 @@ import pytest
 
 from pytest_mock import mocker
 
-from workspace.core import WorkSpace
-from workspace.exceptions import ThisIsNotAWorkspace
+from myworkspace.core import WorkSpace
+from myworkspace.exceptions import ThisIsNotAWorkspace
 
 
 @pytest.fixture
@@ -20,8 +20,8 @@ def test_da_error_si_intento_agregar_un_child_que_no_es_un_workspace(workspace):
 
 
 def test_se_puede_crear_el_workspace(mocker, workspace):
-    exists_mock = mocker.patch("workspace.core.exists")
-    mkdir_mock = mocker.patch("workspace.core.mkdir")
+    exists_mock = mocker.patch("myworkspace.core.exists")
+    mkdir_mock = mocker.patch("myworkspace.core.mkdir")
     exists_mock.return_value = False
 
     workspace.add_child(WorkSpace(name="python"))
@@ -35,8 +35,8 @@ def test_se_puede_crear_el_workspace(mocker, workspace):
 
 
 def test_si_existe_no_podra_crearse(workspace, mocker):
-    exists_mock = mocker.patch("workspace.core.exists")
-    mkdir_mock = mocker.patch("workspace.core.mkdir")
+    exists_mock = mocker.patch("myworkspace.core.exists")
+    mkdir_mock = mocker.patch("myworkspace.core.mkdir")
     exists_mock.return_value = True
 
     workspace.build()

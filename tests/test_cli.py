@@ -2,7 +2,7 @@ from click.testing import CliRunner
 
 import pytest
 
-from workspace.scripts.cli import workspace
+from myworkspace.scripts.cli import workspace
 
 
 @pytest.fixture
