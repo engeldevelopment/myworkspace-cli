@@ -5,7 +5,7 @@ lint:
 	@flakehell lint
 
 black:
-	@black workspace/ tests/
+	@black myworkspace/ tests/
 
 cov: lint
 	@pytest --cov
