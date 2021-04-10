@@ -35,8 +35,8 @@ def test_se_puede_crear_el_workspace(mocker, workspace):
 
 
 def test_si_existe_no_podra_crearse(workspace, mocker):
-    exists_mock = mocker.patch('workspace.core.exists')
-    mkdir_mock = mocker.patch('workspace.core.mkdir')
+    exists_mock = mocker.patch("workspace.core.exists")
+    mkdir_mock = mocker.patch("workspace.core.mkdir")
     exists_mock.return_value = True
 
     workspace.build()
