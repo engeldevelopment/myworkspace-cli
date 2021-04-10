@@ -1,22 +1,24 @@
-from unittest import TestCase
-
 from click.testing import CliRunner
+
+import pytest
 
 from workspace.scripts.cli import workspace
 
 
-class TestCliWorkSpace(TestCase):
-    def setUp(self):
-        self.runner = CliRunner()
+@pytest.fixture
+def runner():
+    return CliRunner()
 
-    def test_se_puede_crear_el_workspace(self):
-        with self.runner.isolated_filesystem():
-            result = self.runner.invoke(workspace, ["build"])
 
-        self.assertIn("Se creó exitosamente!", result.output)
+def test_se_puede_crear_el_workspace(runner):
+    with runner.isolated_filesystem():
+        result = runner.invoke(workspace, ["build"])
 
-    def test_se_puede_crear_el_workspace_dado_un_nombre(self):
-        with self.runner.isolated_filesystem():
-            result = self.runner.invoke(workspace, ["build", "--name", "development"])
+    assert "Se creó exitosamente!" in result.output
 
-        self.assertIn("Se creó exitosamente!", result.output)
+
+def test_se_puede_crear_el_workspace_dado_un_nombre(runner):
+    with runner.isolated_filesystem():
+        result = runner.invoke(workspace, ["build", "--name", "development"])
+
+    assert "Se creó exitosamente!" in result.output

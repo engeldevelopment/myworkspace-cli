@@ -17,9 +17,12 @@ def workspace():
     help="Nombre que quieras darle a tu workspace",
 )
 def build(name):
-    workspace = WorkSpace(name=name)
-    workspace.build()
-    if workspace.was_created:
+    work = WorkSpace(name=name)
+    work.add_child(WorkSpace(name="python"))
+    work.add_child(WorkSpace(name="js"))
+    work.add_child(WorkSpace(name="ruby"))
+    work.build()
+    if work.was_created:
         click.echo("Se creó exitosamente!")
 
 
