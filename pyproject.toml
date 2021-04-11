@@ -22,7 +22,7 @@ pyflakes = ["-*"]
 
 [tool.poetry]
 name = "myworkspace"
-version = "0.1.0"
+version = "2.0.0"
 description = "Herramienta para construir mi espacio de trabajo."
 authors = ["engel <engeljavierpinto@gmail.com>"]
 readme = "README.md"
@@ -51,8 +51,12 @@ pre-commit = "^2.12.0"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.0.1"
-tag_format = "0.1.0"
+version = "2.0.0"
+version_files = [
+    "pyproject.toml:version",
+    "myworkspace/__version__.py"
+]
+tag_format = "$major.$minor.$patch"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

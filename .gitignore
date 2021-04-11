@@ -12,3 +12,4 @@ htmlcov/
 *.sqlite3
 .env
 secrets.json
+CHANGELOG.md
