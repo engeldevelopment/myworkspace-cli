@@ -25,7 +25,6 @@ name = "myworkspace"
 version = "2.0.0"
 description = "Herramienta para construir mi espacio de trabajo."
 authors = ["engel <engeljavierpinto@gmail.com>"]
-readme = "README.md"
 
 [tool.poetry.scripts]
 myworkspace = "myworkspace.scripts.cli:workspace"
