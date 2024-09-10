@@ -22,9 +22,9 @@ jobs:
 
       - name: Installing dependencies
         run:  poetry install
-      
-      - name: Running test and coverage
-        run: make cov
-      
+
       - name: Running linter
-        run: make lint
+        run: make black
+
+      - name: Running test and coverage
+        run: make test && make cov

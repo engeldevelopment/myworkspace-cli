@@ -1,24 +1,5 @@
-[tool.flakehell]
-max_line_length = 120
-format = "grouped"
-source = true
-statistics = true
-
 [tool.black]
 line_length=120
-
-[tool.flakehell.plugins]
-pycodestyle = ["+*"]
-pyflakes = ["+*" ]
-flake8-import-order = ["+*"]
-flake8-eradicate = ["+*"]
-flake8-black = ["+*"]
-pylint = ["+*"]
-flake8-simplify = ["+*"]
-
-[tool.flakehell.exceptions."tests/"]
-pycodestyle = ["-F401", "-E501"]
-pyflakes = ["-*"]
 
 [tool.poetry]
 name = "myworkspace"
