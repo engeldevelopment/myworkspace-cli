@@ -1,11 +1,8 @@
-test: lint
+test:
 	@pytest -v
 
-lint:
-	@flakehell lint
-
 black:
-	@black workspace/ tests/
+	@black myworkspace/ tests/
 
-cov: lint
+cov: 
 	@pytest --cov

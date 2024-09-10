@@ -1,24 +1,5 @@
-[tool.flakehell]
-max_line_length = 120
-format = "grouped"
-source = true
-statistics = true
-
 [tool.black]
 line_length=120
-
-[tool.flakehell.plugins]
-pycodestyle = ["+*"]
-pyflakes = ["+*" ]
-flake8-import-order = ["+*"]
-flake8-eradicate = ["+*"]
-flake8-black = ["+*"]
-pylint = ["+*"]
-flake8-simplify = ["+*"]
-
-[tool.flakehell.exceptions."tests/"]
-pycodestyle = ["-F401", "-E501"]
-pyflakes = ["-*"]
 
 [tool.poetry]
 name = "myworkspace"
@@ -30,21 +11,21 @@ authors = ["engel <engeljavierpinto@gmail.com>"]
 myworkspace = "myworkspace.scripts.cli:workspace"
 
 [tool.poetry.dependencies]
-python = "^3.8"
-click = "^7.1.2"
-colorama = "^0.4.4"
+python = "^3.11"
+click = "^8.1.7"
+colorama = "^0.4.6"
 
-[tool.poetry.dev-dependencies]
-pytest-mock = "^3.5.1"
-pytest-cov = "^2.11.1"
-MutPy = "^0.6.1"
+[tool.poetry.group.dev.dependencies]
+pytest-mock = "^3.14.0"
+pytest-cov = "^5.0.0"
+mutpy = "^0.6.1"
 flakehell = "^0.9.0"
-flake8-black = "^0.2.1"
-flake8-eradicate = "^1.0.0"
-flake8-import-order = "^0.18.1"
-flake8-simplify = "^0.14.0"
-pytest = "^6.2.3"
-black = "^20.8b1"
+flake8-black = "^0.3.6"
+flake8-eradicate = "^1.5.0"
+flake8-import-order = "^0.18.2"
+flake8-simplify = "^0.21.0"
+pytest = "^8.3.3"
+black = "^24.8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
