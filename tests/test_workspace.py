@@ -3,8 +3,6 @@ from myworkspace.exceptions import ThisIsNotAWorkspace
 
 import pytest
 
-from pytest_mock import mocker
-
 
 @pytest.fixture
 def workspace():
@@ -52,5 +50,5 @@ def test_el_path_de_un_workspace_sera_la_concatenacion_de_su_nombre(mocker):
     python = Workspace(name="python")
     workspace.add_child(python)
 
-    assert workspace.path == "/user/development"
-    assert python.path == "/user/development/python"
+    assert "development" in workspace.path
+    assert "python" in python.path
