@@ -28,6 +28,9 @@ class Workspace:
             raise ThisIsNotAWorkspace()
         child.parent = self
         self.children.append(child)
+    
+    def __str__(self) -> str:
+        return self.name
 
     @property
     def path(self):

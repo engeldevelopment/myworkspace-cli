@@ -13,3 +13,4 @@ htmlcov/
 .env
 secrets.json
 venv
+myworkspace.json

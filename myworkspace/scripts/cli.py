@@ -1,6 +1,6 @@
 import click
 
-from myworkspace.core import Workspace
+from myworkspace.services import WorkspaceService
 
 
 @click.group("workspace")
@@ -17,11 +17,8 @@ def workspace():
     help="Nombre que quieras darle a tu workspace",
 )
 def build(name):
-    work = Workspace(name=name)
-    work.add_child(Workspace(name="python"))
-    work.add_child(Workspace(name="js"))
-    work.add_child(Workspace(name="ruby"))
-    work.build()
+    service = WorkspaceService(name=name)
+    work = service.build() 
     if work.was_created:
         click.echo("Se creó exitosamente!")
 
