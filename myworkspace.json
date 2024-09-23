@@ -1,14 +1,40 @@
 [
   {
-    "name": "js"
+    "name": "js",
+    "children": [
+      {
+        "name": "react"
+      },
+      {
+        "name": "vue"
+      }
+    ]
   },
   {
-    "name": "python"
+    "name": "python",
+    "children": [
+      {
+        "name": "django"
+      }
+    ]
   },
   {
-    "name": "java"
+    "name": "java",
+    "children": [
+      {
+        "name": "spring"
+      }
+    ]
   },
   {
-    "name": "php"
+    "name": "php",
+    "children": [
+      {
+        "name": "laravel"
+      },
+      {
+        "name": "packages"
+      }
+    ]
   }
 ]
